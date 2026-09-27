@@ -1,0 +1,19 @@
+[speaker1] What are you guys using LinguaForge for? I thought it was just a text-to-speech app. [1]
+
+[speaker2] I use it for language learning. I create conversations, add pauses, and practice speaking with shadowing. [0]
+
+[speaker3] I’m using it for my animated series. I create voices and dialogue for different characters, then generate the audio for each scene. [0]
+
+[speaker2] Oh, that’s useful for games too. You could prototype NPC conversations and quest dialogue without recording every line. [1.5]
+
+[speaker3] Exactly. And you could use the same workflow for audiobooks or storytelling with different character voices. [2]
+
+[speaker1] So YouTubers could use it for narration and podcasts too? [0]
+
+[speaker2] Yeah. And teachers could create interactive lessons with a teacher and student instead of boring monologues. [0]
+
+[speaker3] I even use it just for prototyping. I can test how a script sounds before hiring voice actors. [1]
+
+[speaker1] Okay, so it’s definitely more than just text-to-speech. [0]
+
+[speaker2] Pretty much. You create the conversation, choose the voices, generate the audio, and experiment with it however you want.

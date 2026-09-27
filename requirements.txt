@@ -1,0 +1,14 @@
+# LinguaForge runtime — Windows / Python 3.11
+# Core TTS runtime (known-good)
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+torchaudio==2.6.0+cu124
+chatterbox-tts==0.1.7
+resemble-perth==1.0.1
+setuptools==80.10.2
+soundfile==0.14.0
+numpy
+
+# Desktop UI
+PySide6==6.11.2
+PySide6-Fluent-Widgets==1.11.3
