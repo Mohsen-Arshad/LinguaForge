@@ -5,12 +5,6 @@ __pycache__/
 .mypy_cache/
 .runtime_cache.json
 
-generated/
-*.wav
-*.mp3
-*.flac
-*.ogg
-
 models/
 checkpoints/
 weights/
