@@ -1,90 +1,222 @@
 # LinguaForge
 
 <p align="center">
-  <img src="assets/linguaforge_logo.png" alt="LinguaForge logo" width="110">
+  <img src="assets/linguaforge_logo.png" alt="LinguaForge logo" width="120">
 </p>
 
 <h1 align="center">LinguaForge</h1>
 
 <p align="center">
-  A local desktop studio for generating natural multi-speaker audio with Chatterbox Turbo.
-  <br>
-  Built for English shadowing, dialogue practice, and scripted conversations.
+  <strong>A local AI voice & dialogue studio for turning text into expressive speech, conversations, and scenes.</strong>
 </p>
 
 <p align="center">
-  <strong>Free • Open Source • Local</strong>
+  Build language-learning material, multi-character conversations, animation dialogue, game lines, and movie-style scenes — powered by generative AI and running locally on your machine.
+</p>
+
+<p align="center">
+  <strong>Free · Open Source · Local AI · GPU Accelerated</strong>
 </p>
 
 ---
 
-## Overview
+## 🎙️ What is LinguaForge?
 
-LinguaForge is a Windows desktop application for generating speech locally with **Chatterbox Turbo**.
+LinguaForge started with a simple idea:
 
-The project started as a shadowing-focused TTS tool, but it has grown into a small dialogue studio. You can generate single-speaker practice material, build conversations with multiple voices, control pauses between lines, and export the result as MP3.
+> **What if generating speech could feel more like working with a script than filling out a TTS form?**
 
-Everything runs locally on the user's machine after the environment is installed.
+Traditional text-to-speech usually follows a very simple workflow:
 
-### What you can use it for
+```text
+Text → Voice → Audio
+```
 
-- English shadowing practice
-- Pronunciation and listening exercises
-- Single-speaker TTS
+LinguaForge expands that into:
+
+```text
+Text
+  +
+Speakers
+  +
+Voice References
+  +
+Timing & Pauses
+  +
+Generation Settings
+        ↓
+   Generative AI
+        ↓
+Structured Audio
+        ↓
+      MP3
+```
+
+The result is a **local AI-powered speech and dialogue studio** built around [Chatterbox Turbo](https://github.com/resemble-ai/chatterbox).
+
+It is designed for people who want to experiment with generative voice technology without building their entire workflow around a paid cloud API.
+
+---
+
+## 🧠 AI-Integrated from the Ground Up
+
+LinguaForge is not just a graphical wrapper around a text-to-speech command.
+
+The application acts as the orchestration layer around a generative speech model.
+
+It takes care of the workflow around the model:
+
+- Script and dialogue parsing
+- Speaker selection
+- Local voice references
 - Multi-speaker conversations
-- Movie / TV-style dialogue generation
-- Scripted character conversations
-- Custom voice references
-- Adjustable speech speed and generation settings
-- MP3 export with selectable bitrate
-- Local CUDA acceleration
+- Sentence-level pauses
+- Speech-speed control
+- Generation configuration
+- Audio sequencing
+- MP3 export
+- GPU/runtime detection
+- Dependency diagnostics
+- First-run environment setup and repair
 
-> **Note:** LinguaForge is currently focused on English because the current generation pipeline and project design have been tested around English speech.
+Conceptually:
+
+```text
+                         ┌──────────────────────┐
+                         │       Your Script    │
+                         │  Text / Conversation │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │     LinguaForge      │
+                         │   Dialogue Pipeline  │
+                         └──────────┬───────────┘
+                                    │
+                    ┌───────────────┴───────────────┐
+                    │                               │
+                    ▼                               ▼
+             Speaker / Voice                 Timing / Pauses
+                Reference
+                    │                               │
+                    └───────────────┬───────────────┘
+                                    ▼
+                         ┌──────────────────────┐
+                         │   Chatterbox Turbo   │
+                         │   Generative Speech  │
+                         │        Model         │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │   Audio Composition  │
+                         │      & Export        │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                              MP3 / Audio
+```
+
+This is what makes the project interesting: the AI model is only one part of the system. LinguaForge builds the **desktop workflow around it**.
 
 ---
 
-## Screenshots
+# ✨ What can you do with it?
 
-> **Add your screenshots here.**
->
-> Recommended folder:
->
-> `docs/screenshots/`
->
-> Suggested files:
->
-> - `generate.png`
-> - `speakers.png`
-> - `system.png`
-> - `dialogue.png`
+## 📚 Language Learning & Shadowing
 
-### Generate
+LinguaForge was originally built with language learning in mind.
 
-![Generate page](docs/screenshots/generate.png)
+Create your own listening and shadowing material instead of depending on a fixed library of recordings.
 
-### Speakers
+For example:
 
-![Speakers page](docs/screenshots/speakers.png)
+```text
+I wake up early every morning. [3]
+I drink coffee before work. [2.5]
+Then I go to the gym. [2]
+```
 
-### System
+You can control the speaker, speed, pauses, and output quality and generate material specifically for the way you want to practice.
 
-![System page](docs/screenshots/system.png)
+Useful for:
 
-### Dialogue generation
-
-![Dialogue generation](docs/screenshots/dialogue.png)
+- English shadowing
+- Listening practice
+- Pronunciation exercises
+- Speaking drills
+- Vocabulary practice
+- Role-play conversations
+- Custom study material
 
 ---
 
-## Features
+## 🎬 Movie, Animation & Scripted Dialogue
 
-### 🎙️ Local TTS generation
+This is where LinguaForge starts becoming more than a TTS tool.
 
-Generate speech locally using Chatterbox Turbo instead of relying on a paid cloud API.
+You can write a scene like:
 
-### 👥 Multiple speakers
+```text
+[speaker1] Did you see what happened? [2]
 
-Define several speakers and use them inside a script:
+[speaker2] No. What happened? [1.5]
+
+[speaker1] They found the car. [2]
+
+[speaker2] Then we should leave. [3]
+```
+
+Different speakers can use different voice references.
+
+That makes the same generation pipeline useful for:
+
+- Movie-style dialogue
+- Animation projects
+- Short films
+- Story prototypes
+- Screenplay visualization
+- Character dialogue
+- Voice prototyping
+
+Instead of generating every sentence separately and assembling everything manually in an audio editor, the conversation itself becomes the input.
+
+---
+
+## 🎮 Game Development & Prototyping
+
+LinguaForge can also be useful during game development when you need temporary or prototype voice lines.
+
+For example:
+
+```text
+[speaker1] The gate is locked. [1]
+[speaker2] Try the control panel. [1.5]
+[speaker1] It's not responding. [2]
+```
+
+Potential uses include:
+
+- NPC dialogue
+- Quest conversations
+- Cutscene prototypes
+- Character interactions
+- Interactive dialogue systems
+- Rapid voice prototyping
+
+It can help answer an important development question early:
+
+> **"What does this scene actually sound like?"**
+
+before committing to a final voice-production workflow.
+
+---
+
+# 🎙️ Multi-Speaker Voice Generation
+
+Create multiple speakers and assign local reference audio to them.
+
+Example:
 
 ```text
 [speaker1] Hey, are you ready? [2]
@@ -92,105 +224,180 @@ Define several speakers and use them inside a script:
 [speaker1] Sure. [2]
 ```
 
-### 🎬 Dialogue generation
-
-LinguaForge can be used for scripted conversations and movie-style dialogue.
-
-For example:
-
-```text
-[speaker1] Did you see what happened?
-[speaker2] No. What happened?
-[speaker1] They found the car.
-[speaker2] Then we should leave.
-```
-
-Each line can use a different voice reference.
-
-### ⏱️ Sentence pauses
-
-Add a pause after a line with:
-
-```text
-[2]
-```
-
-or:
-
-```text
-[2.5]
-```
-
-If a line does not specify a pause, LinguaForge can use the default pause behavior rather than dropping the line.
-
-### ⚡ CUDA acceleration
-
-The project is configured around a known-good CUDA/PyTorch combination:
-
-- PyTorch `2.6.0+cu124`
-- TorchVision `0.21.0+cu124`
-- TorchAudio `2.6.0+cu124`
-
-A compatible NVIDIA GPU is recommended for practical generation speed.
-
-### 🔊 MP3 export
-
-Generated audio can be exported to MP3 with selectable bitrate:
-
-- 128 kbps
-- 160 kbps
-- 192 kbps
-- 256 kbps
-- 320 kbps
-
-### 🧰 Built-in system diagnostics
-
-The **System** page checks the runtime environment and provides dependency/install/repair functionality.
-
-LinguaForge also caches a successful environment check so it does not waste time repeating the same expensive checks on every startup.
+If a multi-speaker configuration exists but a line has no speaker tag, LinguaForge can fall back to the configured default speaker instead of unnecessarily breaking the generation workflow.
 
 ---
 
-# Installation
+# ⏱️ Dialogue Timing & Pauses
 
-## Requirements
+Pause values can be attached directly to lines:
 
-LinguaForge is currently intended for:
+```text
+[speaker1] Hello. [3]
+```
+
+Conceptually:
+
+```text
+Generate "Hello."
+        ↓
+Wait 3 seconds
+        ↓
+Continue
+```
+
+Decimal pauses are supported too:
+
+```text
+[speaker2] Give me a second. [1.5]
+```
+
+Lines without an explicit pause can use the application's default pause behavior rather than being silently discarded.
+
+---
+
+# 🔊 MP3 Export
+
+Generated audio can be exported as MP3 with selectable bitrate:
+
+| Bitrate | Typical use |
+|---|---|
+| 128 kbps | Smaller files |
+| 160 kbps | General listening |
+| 192 kbps | Good balance |
+| 256 kbps | Higher-quality export |
+| 320 kbps | High-bitrate MP3 |
+
+The selected bitrate is applied to the actual export pipeline rather than being merely a UI preference.
+
+---
+
+# ⚡ Local GPU-Accelerated AI
+
+LinguaForge is designed for local GPU inference.
+
+The tested environment uses:
+
+```text
+PyTorch       2.6.0+cu124
+TorchVision   0.21.0+cu124
+TorchAudio    2.6.0+cu124
+Chatterbox    0.1.7
+```
+
+A compatible NVIDIA GPU with CUDA support is recommended for practical generation performance.
+
+The project has been tested with an:
+
+```text
+NVIDIA GeForce GTX 1660 Ti
+6 GB VRAM
+```
+
+Your actual generation performance will depend on your GPU, available VRAM, system configuration, and workload.
+
+---
+
+# 🔒 Local First
+
+One of LinguaForge's core ideas is simple:
+
+> **The AI should run on your machine.**
+
+Once the environment and required model assets are installed, the core generation workflow does not depend on a paid speech-generation API.
+
+Your workflow can therefore look like:
+
+```text
+Your Computer
+│
+├── LinguaForge
+├── Chatterbox Turbo
+├── PyTorch
+├── CUDA
+├── Local Voice References
+└── Generated Audio
+```
+
+This makes LinguaForge useful for experimentation, development, education, and private local workflows.
+
+---
+
+# 🖥️ Screenshots
+
+> Add your screenshots to `docs/screenshots/`.
+
+### Generate
+
+![LinguaForge Generate](docs/screenshots/generate.png)
+
+### Speakers
+
+![LinguaForge Speakers](docs/screenshots/speakers.png)
+
+### System
+
+![LinguaForge System](docs/screenshots/system.png)
+
+### Dialogue
+
+![LinguaForge Dialogue](docs/screenshots/dialogue.png)
+
+### Demo
+
+A short GIF or video showing the complete workflow would work especially well here:
+
+```text
+docs/demo.gif
+```
+
+```markdown
+![LinguaForge demo](docs/demo.gif)
+```
+
+---
+
+# 🚀 Installation
+
+## Windows
+
+LinguaForge is currently designed for Windows.
+
+### Requirements
 
 - Windows
 - Python 3.11
 - NVIDIA GPU with CUDA support recommended
 - FFmpeg
-- Internet connection for the initial dependency/model setup
+- Internet connection for initial dependency/model setup
 
-The project uses a pinned PyTorch/Chatterbox environment because mixing arbitrary versions can break the TTS stack.
-
-## Easiest setup
-
-If you are using a fresh Windows installation:
-
-1. Clone or download the repository.
-2. Make sure Python 3.11 is installed.
-3. Run:
-
-```text
-setup.bat
-```
-
-4. Wait for the setup process to finish.
-5. Start the application with:
-
-```text
-run.bat
-```
-
-The goal of `setup.bat` is to make the first-run experience as simple as possible, even for someone who does not normally work with Python environments.
+The project uses a known-good dependency combination because AI frameworks such as PyTorch, TorchAudio, TorchVision, Chatterbox, and the Perth watermarking stack are sensitive to version mismatches.
 
 ---
 
-# Manual setup
+## 🟢 The Easy Way
 
-Create the virtual environment:
+The goal is to make the first-run experience as simple as possible.
+
+On a fresh Windows installation:
+
+```text
+1. Install Python 3.11
+2. Download / clone LinguaForge
+3. Run setup.bat
+4. Wait for setup to finish
+5. Run run.bat
+```
+
+The setup process creates and prepares the project's Python environment and installs the required dependencies.
+
+The application also includes a **System** page for environment diagnostics and installation/repair.
+
+---
+
+## ⚙️ Manual Setup
+
+If you prefer to manage the environment yourself:
 
 ```powershell
 py -3.11 -m venv .venv
@@ -202,14 +409,14 @@ Activate it:
 .venv\Scripts\activate
 ```
 
-Install the pinned runtime:
+Install the dependencies:
 
 ```powershell
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-Then run:
+Run:
 
 ```powershell
 python run.py
@@ -217,21 +424,11 @@ python run.py
 
 ---
 
-# Important dependency note
+# 🧩 Why are some dependencies pinned?
 
-LinguaForge intentionally pins:
+The project intentionally uses a known-good environment.
 
-```text
-setuptools==80.10.2
-```
-
-This is not an arbitrary version choice.
-
-The Chatterbox/Perth watermarking stack used by the project relies on `pkg_resources`, and newer setuptools versions can remove or break that compatibility.
-
-For that reason, avoid blindly upgrading every package in the environment.
-
-The known-good core combination is:
+In particular:
 
 ```text
 torch==2.6.0+cu124
@@ -242,9 +439,87 @@ resemble-perth==1.0.1
 setuptools==80.10.2
 ```
 
+The `setuptools` version is especially important because the Perth watermarking package used by Chatterbox relies on `pkg_resources` compatibility.
+
+Blindly upgrading the environment can therefore break an otherwise working installation.
+
+**If it works, don't randomly upgrade the AI stack.**
+
 ---
 
-# Project structure
+# 🧰 System & First-Run Diagnostics
+
+LinguaForge includes a dedicated **System** page.
+
+It is designed to make problems that would normally require opening a terminal easier to understand.
+
+The system layer can check the environment and provide installation/repair functionality.
+
+To avoid performing the full dependency scan on every launch, a successful environment validation can be cached.
+
+```text
+First launch
+    ↓
+Full environment check
+    ↓
+Dependencies validated
+    ↓
+Save runtime state
+    ↓
+Normal launches
+    ↓
+Fast startup
+```
+
+The runtime cache is local and should not be committed to Git.
+
+---
+
+# 🏗️ Architecture
+
+LinguaForge is deliberately separated into layers instead of becoming one giant Python script.
+
+At a high level:
+
+```text
+┌───────────────────────────────────┐
+│            Presentation           │
+│     MainWindow / Views / UI       │
+└─────────────────┬─────────────────┘
+                  │
+┌─────────────────▼─────────────────┐
+│             Services              │
+│ Parsing / Generation / System     │
+│ Speakers / Audio / Application    │
+└─────────────────┬─────────────────┘
+                  │
+┌─────────────────▼─────────────────┐
+│              Models               │
+│ Speakers / Generation / Events    │
+└─────────────────┬─────────────────┘
+                  │
+┌─────────────────▼─────────────────┐
+│          Infrastructure           │
+│ Chatterbox / PyTorch / CUDA       │
+│ FFmpeg / Filesystem / Runtime     │
+└───────────────────────────────────┘
+```
+
+The goal is simple:
+
+> **The UI should not need to understand how Chatterbox, CUDA, FFmpeg, or speaker persistence actually work.**
+
+This separation makes the application easier to extend and maintain.
+
+For a deeper architectural explanation, see:
+
+```text
+ARCHITECTURE.md
+```
+
+---
+
+# 📁 Project Structure
 
 ```text
 LinguaForge/
@@ -279,6 +554,9 @@ LinguaForge/
 │   ├── linguaforge_logo.png
 │   └── linguaforge_logo.ico
 │
+├── docs/
+│   └── screenshots/
+│
 ├── tests/
 │   ├── test_dialogue_parser.py
 │   └── test_pause_service.py
@@ -289,16 +567,15 @@ LinguaForge/
 ├── requirements.txt
 ├── speakers.json
 ├── ARCHITECTURE.md
+├── .gitignore
 └── README.md
 ```
 
-The application is intentionally separated into UI, models, services, and utilities instead of putting the entire program into one large Python file.
-
 ---
 
-# Input format
+# 📝 Input Format
 
-## Single speaker
+## Single Speaker
 
 ```text
 I wake up early every morning. [3]
@@ -306,7 +583,7 @@ I drink coffee before work. [2.5]
 Then I go to the gym. [2]
 ```
 
-## Multiple speakers
+## Multiple Speakers
 
 ```text
 [speaker1] Hey, how are you? [2]
@@ -314,214 +591,189 @@ Then I go to the gym. [2]
 [speaker1] I'm good too. [2]
 ```
 
-The final number represents the pause after that line.
+The final number represents the pause after the line.
 
-For example:
-
-```text
-[speaker1] Hello. [3]
-```
-
-means:
-
-> Generate "Hello." → wait 3 seconds → continue.
+Speaker tags are optional when the configured workflow has a default speaker available.
 
 ---
 
-# Voice / Speaker references
+# 🎯 Design Philosophy
 
-Speakers are configured through the application's speaker management interface.
+LinguaForge is built around a few practical principles.
 
-A speaker can have a local reference audio file which is used by the generation pipeline.
+### Local first
 
-The repository keeps speaker configuration separate from the actual generation logic so the UI does not need to know how the audio engine works internally.
+The application should remain useful without turning every generation into a paid API request.
 
----
+### AI as an engine, not the entire product
 
-# Architecture
+The model generates the speech.
 
-At a high level, LinguaForge follows a layered structure:
+LinguaForge handles the workflow around the model.
 
-```text
-┌──────────────────────────────┐
-│          Presentation        │
-│  MainWindow / Views / Widgets│
-└──────────────┬───────────────┘
-               │
-┌──────────────▼───────────────┐
-│          Application          │
-│ Controllers / Services / Flow │
-└──────────────┬───────────────┘
-               │
-┌──────────────▼───────────────┐
-│            Models             │
-│ Generation / Speaker / Events │
-└──────────────┬───────────────┘
-               │
-┌──────────────▼───────────────┐
-│        Infrastructure         │
-│ Chatterbox / PyTorch / Audio  │
-│ FFmpeg / Filesystem / System  │
-└──────────────────────────────┘
-```
+### Structured dialogue
 
-The important idea is that the UI should not have to understand the internals of Chatterbox, CUDA, FFmpeg, or speaker-file management.
+Conversation should be represented as data that can be parsed, processed, generated, and composed.
 
-For a deeper explanation of the architecture, see:
+### Simple for users, engineered underneath
 
-```text
-ARCHITECTURE.md
-```
+A user should not need to understand PyTorch environments, CUDA versions, or model loading just to generate a conversation.
+
+### Stable over clever
+
+A known-good dependency stack is more valuable than constantly chasing the newest package versions.
 
 ---
 
-# Performance and startup
+# 🧪 Testing
 
-The first environment check can take noticeably longer because LinguaForge has to verify the runtime.
-
-After a successful validation, the result is stored in:
-
-```text
-.runtime_cache.json
-```
-
-That file is intentionally **not committed to Git**.
-
-On later launches, LinguaForge can use the cached validation result instead of repeatedly performing the full dependency scan.
-
-If the environment changes, the cache can be refreshed from the System page.
-
----
-
-# Testing
-
-The project currently includes tests for core parsing/pause behavior:
+Run the test suite with:
 
 ```powershell
 python -m pytest
 ```
 
-If pytest is not installed:
+Core areas worth testing include:
 
-```powershell
-python -m pip install pytest
-```
+- Dialogue parsing
+- Speaker selection
+- Pause handling
+- Default-speaker fallback
+- Generation configuration
+- Audio composition
+- MP3 export
+- Runtime/dependency detection
 
-The most important parts to test independently are:
-
-- dialogue parsing
-- pause handling
-- speaker selection
-- generation configuration
-- export behavior
-
----
-
-# Development
-
-A useful development workflow is:
+A good development loop is:
 
 ```text
-Change code
-   ↓
-Run tests
-   ↓
+Change
+  ↓
+Test
+  ↓
 Run application
-   ↓
-Test the affected workflow
-   ↓
+  ↓
+Test affected workflow
+  ↓
 Check System page
-   ↓
-Commit only source/configuration changes
+  ↓
+Commit
 ```
-
-Avoid committing:
-
-- virtual environments
-- Python bytecode
-- generated MP3 files
-- local runtime caches
-- downloaded model weights
-- wheels
-- IDE metadata
-- temporary files
-
-The repository `.gitignore` is configured for these cases.
 
 ---
 
-# Contributing
+# 🤝 Contributing
+
+Contributions are welcome.
 
 If you want to improve LinguaForge:
 
 1. Fork the repository.
-2. Create a branch for your change.
-3. Keep changes focused.
-4. Add or update tests when behavior changes.
-5. Test the application locally.
-6. Open a pull request with a short explanation of the change.
+2. Create a focused branch.
+3. Make the change.
+4. Add or update tests where appropriate.
+5. Run the application and test the affected workflow.
+6. Open a pull request explaining what changed and why.
 
-For larger architectural changes, explain the reason for the change before changing multiple layers of the application.
-
----
-
-# Project status
-
-LinguaForge is an actively developed open-source project.
-
-The current focus is a stable local desktop experience with:
-
-- Chatterbox Turbo
-- CUDA acceleration
-- multi-speaker generation
-- dialogue support
-- configurable pauses
-- MP3 export
-- a Fluent-style desktop UI
-- first-run environment setup and repair
+For larger architectural changes, explain the reasoning before modifying multiple layers.
 
 ---
 
-# License
+# 🛣️ Roadmap
 
-No license has been added to this repository yet.
+LinguaForge is still evolving.
 
-If you publish the project publicly, add a `LICENSE` file with the license you actually intend to use.
+Possible future directions include:
 
-Also review the licenses of the dependencies used by LinguaForge before redistributing the application.
+- More language support
+- More generation backends
+- Better dialogue editing
+- Richer timeline/audio controls
+- More advanced voice management
+- Additional export formats
+- Improved GPU/runtime diagnostics
+- More automation around scripted production
+- Better tooling for language-learning workflows
+- More AI-assisted features around script and dialogue preparation
+
+The goal is not to turn LinguaForge into a complicated DAW.
+
+The goal is to make **AI-generated dialogue ridiculously easy to build locally.**
 
 ---
 
-# Screenshots / media folder
+# ⚠️ Current Scope
 
-For GitHub screenshots, create:
+LinguaForge is currently focused on **English speech generation** because that is the language around which the current generation pipeline and project workflow have been tested.
+
+Support for additional languages depends on the capabilities and limitations of the underlying speech model and the quality of the required voice references.
+
+---
+
+# 🔐 Privacy & Voice References
+
+LinguaForge is designed around local processing.
+
+Voice-reference files are used by the local generation workflow and should be treated as user-provided audio assets.
+
+Only use voice recordings that you have the right or permission to use, especially when creating or distributing generated audio.
+
+---
+
+# 📦 What should NOT be committed?
+
+The repository should not contain:
+
+- `.venv/`
+- Python bytecode
+- generated MP3 files
+- runtime caches
+- downloaded model weights
+- `.whl` files
+- temporary files
+- IDE metadata
+- local configuration containing secrets
+
+The project `.gitignore` is intended to keep these out of version control.
+
+---
+
+# 📄 License
+
+Add a `LICENSE` file before publishing the repository if you want to formally define how others may use, modify, and redistribute LinguaForge.
+
+Also review the licenses of LinguaForge's dependencies and the terms of any model or voice technology used by the project.
+
+---
+
+# ❤️ Why LinguaForge?
+
+Because local AI does not have to mean command lines, Python environments, model folders, and a collection of scripts held together with duct tape.
+
+The idea behind LinguaForge is to take powerful generative speech technology and wrap it in an actual creative workflow:
 
 ```text
-docs/
-└── screenshots/
-    ├── generate.png
-    ├── speakers.png
-    ├── system.png
-    └── dialogue.png
+Write
+  ↓
+Choose speakers
+  ↓
+Set timing
+  ↓
+Generate
+  ↓
+Listen
+  ↓
+Export
 ```
 
-Then the README images above will work automatically.
-
-You can also add a short demo GIF here later:
-
-```text
-docs/
-└── demo.gif
-```
-
-and embed it with:
-
-```markdown
-![LinguaForge demo](docs/demo.gif)
-```
+Whether you're practicing a language, prototyping a game, writing a scene, building an animation, experimenting with AI voices, or simply curious about what local generative speech can do, LinguaForge gives you a place to start.
 
 ---
 
 <p align="center">
-  Made for local speech generation, language learning, and dialogue creation.
+  <strong>Write the dialogue. Choose the voices. Let the AI speak.</strong>
+</p>
+
+<p align="center">
+  <sub>LinguaForge — Local AI speech generation, built for creators.</sub>
 </p>
