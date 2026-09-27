@@ -60,22 +60,18 @@ Everything runs locally on the user's machine after the environment is installed
 
 ### Generate
 
-<!-- Replace the path below with your screenshot -->
 ![Generate page](docs/screenshots/generate.png)
 
 ### Speakers
 
-<!-- Replace the path below with your screenshot -->
 ![Speakers page](docs/screenshots/speakers.png)
 
 ### System
 
-<!-- Replace the path below with your screenshot -->
 ![System page](docs/screenshots/system.png)
 
 ### Dialogue generation
 
-<!-- Replace the path below with your screenshot -->
 ![Dialogue generation](docs/screenshots/dialogue.png)
 
 ---
