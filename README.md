@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  Build language-learning material, multi-character conversations, animation dialogue, game lines, and movie-style scenes — powered by generative AI and running locally on your machine.
+  Build language-learning material, multi-character conversations, animation dialogue, game lines, and movie-style scenes - powered by generative AI and running locally on your machine.
 </p>
 
 <p align="center">
@@ -773,5 +773,5 @@ See the [LICENSE](LICENSE) file for the full text.
 </p>
 
 <p align="center">
-  <sub>LinguaForge — Local AI speech generation, built for creators.</sub>
+  <sub>LinguaForge - Local AI speech generation, built for creators.</sub>
 </p>
