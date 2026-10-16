@@ -738,14 +738,6 @@ The project `.gitignore` is intended to keep these out of version control.
 
 ---
 
-# 📄 License
-
-Add a `LICENSE` file before publishing the repository if you want to formally define how others may use, modify, and redistribute LinguaForge.
-
-Also review the licenses of LinguaForge's dependencies and the terms of any model or voice technology used by the project.
-
----
-
 # ❤️ Why LinguaForge?
 
 Because local AI does not have to mean command lines, Python environments, model folders, and a collection of scripts held together with duct tape.
