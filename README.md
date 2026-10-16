@@ -760,6 +760,12 @@ Export
 
 Whether you're practicing a language, prototyping a game, writing a scene, building an animation, experimenting with AI voices, or simply curious about what local generative speech can do, LinguaForge gives you a place to start.
 
+## License
+
+This project is licensed under the **GNU General Public License v2.0 (GPL-2.0)**.
+
+See the [LICENSE](LICENSE) file for the full text.
+
 ---
 
 <p align="center">
